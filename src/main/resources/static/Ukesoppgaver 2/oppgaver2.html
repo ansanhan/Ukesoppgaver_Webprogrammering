@@ -1,6 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!--Ekstraoppgaver
+    1. Legg til flere personer i personregisteret.
+    2. Sortér personregisteret basert på navn og skriv ut både det usortert og det sortert registeret.
+    3. La annenhver linje stå med fet skrift (bruk for eksempel strong).
+    4. Legg til en kolonne med fødselsnummer (11 siffer).
+    6. Merk enten kvinner eller menn med fet skrift eller lignende. (Tips: Se på et av sifrene i fødselsnummeret.)-->
     <meta charset="UTF-8">
     <title>Ukesoppgaver 2 - JavaScript2</title>
     <script type="application/javascript">
@@ -17,10 +23,21 @@
                 telefonnr: 95732456
             }
 
+            const person3 = {
+                navn: "Kris Melby",
+                adresse: "Moldegata 17",
+                telefonnr: 92749223
+            }
+
+            const person4 = {
+                navn: "Andrea Hansen",
+                adresse: "Moldegata 15",
+                telefonnr: 45298776
+            }
+
             const personregister = [];
 
-            personregister.push(person1);
-            personregister.push(person2);
+            personregister.push(person1, person2, person3, person4);
 
             let ut = "<table><tr>" +
                 "<th>Navn</th><th>Adresse</th><th>Telefonnr</th>" +
@@ -30,8 +47,25 @@
                 ut+= "<tr><td>" + person.navn + "</td><td>" + person.adresse + "</td><td>" + person.telefonnr + "</td></tr>";
             }
 
-            document.getElementById("personRegister").innerHTML=ut;
+            function compare(a, b) {
+                if (a.navn < b.navn) {
+                    return -1;
+                }
+                if (a.navn > b.navn) {
+                    return 1;
+                }
+                return 0;
+            }
 
+            ut += "<br>";
+
+            const sortertliste = personregister.sort(compare);
+
+            for (let person of sortertliste) {
+                ut+= "<tr><td>" + person.navn + "</td><td>" + person.adresse + "</td><td>" + person.telefonnr + "</td></tr>";
+            }
+
+            document.getElementById("personRegister").innerHTML=ut;
         }
     </script>
 </head>
