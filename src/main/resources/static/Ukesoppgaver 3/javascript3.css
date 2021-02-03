@@ -1,0 +1,22 @@
+body {
+    font-family: Helvetica;
+}
+
+h3 {
+    color: #136f6a;
+    font-family: Helvetica;
+    margin-bottom: 0;
+}
+
+h5 {
+    font-family: Helvetica;
+    font-weight: lighter;
+    font-size: 15px;
+    margin-top: 5px;
+}
+
+button {
+    background-color: #d6d4ef;
+    border: solid 0.001em;
+    border-radius: 8px;
+}
