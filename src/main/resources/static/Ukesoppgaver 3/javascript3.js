@@ -175,4 +175,9 @@ function registrerPerson() {
 
     ut += "</table>";
     document.getElementById("personRegister").innerHTML = ut;
+
+    document.getElementById('nyttNavn').value='';
+    document.getElementById('nyAdresse').value='';
+    document.getElementById('nyttNummer').value='';
 }
+
