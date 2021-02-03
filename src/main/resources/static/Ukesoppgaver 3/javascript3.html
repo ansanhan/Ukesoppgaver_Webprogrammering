@@ -94,5 +94,37 @@ inputboksene. -->
 <div id="utregning"></div>
 
 
+
+<!--Oppgave 4
+Utvid ukeoppgaven fra i forrige uke (personregister) med å ha mulighet for å lese inn
+persondataene via tekstbokser også legge disse objektene inn i arrayet. Dette skjer ved en ny knapp.
+Samme funksjonalitet for å vise arrayet (via egen knapp).-->
+
+<h3></br>Oppgave 4</h3>
+<h5>Legge til nye personer i personregister</h5>
+
+<table>
+    <tr>
+        <td>Navn:</td>
+        <td><input type="text" id="nyttNavn" name="nyInput"/></td>
+    </tr>
+    <tr>
+        <td>Adresse:</td>
+        <td><input type="text" id="nyAdresse" name="nyInput"/></td>
+    </tr>
+    <tr>
+        <td>Telefonnummer:</td>
+        <td><input type="text" id="nyttNummer" name="nyInput"/></td>
+    </tr>
+    <tr>
+        <td><button onclick="registrerPerson();">Registrer ny person</button></td>
+    </tr>
+    <tr>
+        <td><button onclick="visPersonRegister()">Vis personregister</button></td>
+    </tr>
+</table>
+
+<div id="personRegister"></div>
+
 </body>
 </html>

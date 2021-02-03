@@ -10,6 +10,8 @@ function visInput() {
     }
 }
 
+
+
 /* OPPGAVE 2 */
 function CtilF() {
     const innC = document.getElementById("celsius").value;
@@ -41,7 +43,9 @@ function FtilC() {
 
 }
 
-/* OPPGAVE 2 */
+
+
+/* OPPGAVE 3 */
 function pluss() {
     const innTall1 = document.getElementById("tall1").value;
     const innTall2 = document.getElementById("tall2").value;
@@ -104,4 +108,71 @@ function dele() {
 
         document.getElementById("utregning").innerHTML ="<br/>" + tall1 + " / " + tall2 + " = " + dele;
     }
+}
+
+
+/* OPPGAVE 4 */
+const personRegister = [];
+
+function visPersonRegister() {
+    const person1 = {
+        navn: "Erik Sommer",
+        adresse: "Mølla 123",
+        telefonnr: 43232323
+    }
+
+    const person2 = {
+        navn: "Mats Sommervold",
+        adresse: "Mølla 123",
+        telefonnr: 95732456
+    }
+
+    personRegister.push(person1, person2);
+
+    let ut = "<table><tr>" +
+        "<th>Navn</th>" +
+        "<th>Adresse</th>" +
+        "<th>Telefonnr</th>" +
+        "</tr>";
+
+
+    for (let person of personRegister) {
+        ut+= "<tr><td>" + person.navn + "</td>" +
+            "<td>" + person.adresse + "</td>" +
+            "<td>" + person.telefonnr + "</td>" +
+            "</tr>";
+    }
+
+    ut+= "</table>";
+    document.getElementById("personRegister").innerHTML=ut;
+}
+
+function registrerPerson() {
+    const innNyttNavn = document.getElementById("nyttNavn").value;
+    const innNyAdresse = document.getElementById("nyAdresse").value;
+    const innNyttNummer = document.getElementById("nyttNummer").value;
+
+    const nyPerson = {
+        navn: innNyttNavn,
+        adresse: innNyAdresse,
+        telefonnr: innNyttNummer
+    }
+
+    personRegister.push(nyPerson);
+
+    let ut = "<table><tr>" +
+        "<th>Navn</th>" +
+        "<th>Adresse</th>" +
+        "<th>Telefonnr</th>" +
+        "</tr>";
+
+    for (let person of personRegister) {
+        ut+= "<tr><td>" + person.navn + "</td>" +
+            "<td>" + person.adresse + "</td>" +
+            "<td>" + person.telefonnr + "</td>" +
+            "</tr>";
+    }
+
+    ut += "</table>";
+    document.getElementById("personRegister").innerHTML = ut;
 }
