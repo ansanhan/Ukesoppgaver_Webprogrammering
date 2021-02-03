@@ -32,8 +32,8 @@ eget felt.-->
 
 <div id="utInput"></div>
 
-
 <hr>
+
 <!-- Oppgave 2
 Lag en HTML-side som konverterer fra farenheit til celsius.
 Formelen er:
@@ -45,19 +45,19 @@ Dersom det skrives inn noe i inputfeltet for C så skal tilsvarende verdi i F le
 Dersom det skrives inn noe i inputfeltet for F så skal tilsvarende verdi i C legges ut i dette feltet.
 JavaScript skal brukes ved beregning og utlegging av resultater.-->
 
-<h3></br>Oppgave 2</h3>
-<h5>Konvertere fra celcius til fahrenheit og omvendt</h5>
+<h3><br/>Oppgave 2</h3>
+<h5>Konvertere fra celsius til fahrenheit og omvendt</h5>
 
 <table>
     <tr>
-        <td>Skriv inn grader i celcius som skal konverteres til fahrenheit:</td>
+        <td>Skriv inn grader i celsius som skal konverteres til fahrenheit:</td>
         <td><input type="text" id="celsius" size="6"/></td>
     </tr>
     <tr>
         <td><button value="Fra celsius til fahrenheit" onclick="CtilF();">Konverter</button></td>
     </tr>
     <tr>
-        <td><br/>Skriv inn grader i fahrenheit som skal konverteres til celcius:</td>
+        <td><br/>Skriv inn grader i fahrenheit som skal konverteres til celsius:</td>
         <td><br/><input type="text" id="fahrenheit" size="6"/></td>
     </tr>
     <tr>
@@ -67,8 +67,8 @@ JavaScript skal brukes ved beregning og utlegging av resultater.-->
 
 <div id="utKonvertere"></div>
 
-
 <hr>
+
 <!--Oppgave 3
 Lag en HTML-kalkulator med to inputfelt og fire knapper, en for hver av regneartene +, - ,* og /.
 Lag så JavaScript-kode som avhengig av hvilken knapp som er trykket viser resultatet av
@@ -76,13 +76,13 @@ regnestykket. Det skal også valideres at inputfeltene bare kan inneholde tall (
 av JavaScript-kode). Feilmeldinger skal også vises dersom det blir skrevet inn noe annet enn tall i
 inputboksene. -->
 
-<h3></br>Oppgave 3</h3>
+<h3><br/>Oppgave 3</h3>
 <h5>Kalkulator</h5>
 <table>
     <tr>
         <td>Skriv inn to tall:</td>
-        <td><input type="text" id="tall1" size="4"/>
-        <input type="text" id="tall2" size="4"/></td>
+        <td><input type="text" id="tall1" size="5"/>
+        <input type="text" id="tall2" size="5"/></td>
     </tr>
     <tr>
         <td>Velg regneoperasjon:</td>
@@ -95,14 +95,14 @@ inputboksene. -->
 
 <div id="utregning"></div>
 
-
 <hr>
+
 <!--Oppgave 4
 Utvid ukeoppgaven fra i forrige uke (personregister) med å ha mulighet for å lese inn
 persondataene via tekstbokser også legge disse objektene inn i arrayet. Dette skjer ved en ny knapp.
 Samme funksjonalitet for å vise arrayet (via egen knapp).-->
 
-<h3></br>Oppgave 4</h3>
+<h3><br/>Oppgave 4</h3>
 <h5>Legge til nye personer i personregister</h5>
 
 <table>
@@ -122,14 +122,44 @@ Samme funksjonalitet for å vise arrayet (via egen knapp).-->
         <td><button onclick="registrerPerson();">Registrer ny person</button></td>
     </tr>
     <tr>
-        <td><button onclick="visPersonRegister()">Vis personregister</button></td>
+        <td><button onclick="visPersonRegister();">Vis personregister</button></td>
     </tr>
 </table>
 
 <div id="personRegister"></div>
 
-
 <hr>
+
+<!--Ekstraoppgave 1
+Lag en gjøremålsliste to do-liste. Det skal være et tekstfelt hvor brukeren kan legge til gjøremål.
+Ved onchange skal verdien av skriv inn feltet legges til som et gjøremål i en HTML-liste.
+Ved siden av hvert gjøremål skal det være en sjekkboks som brukeren kan krysse av hvis oppgaven er ferdig.
+Tips: Bruk metoden dinTabell.insertAdjacentHTML('beforeend', 'to do html her')
+i stedet for innerHTML siden det vil resette alle sjekkboksene hver gang det legges til et element.-->
+
+<h3><br/>Ekstraoppgave 1</h3>
+<h5>To do-liste</h5>
+
+<table id="toDoTable">
+    <tr>
+        <td>Skriv inn nytt gjøremål:</td>
+    </tr>
+    <tr>
+        <td><label for="nyToDo"></label>
+            <input type="text" id="nyToDo" size="40" onchange="leggTil();"/></td>
+    </tr>
+</table>
+
+<div id="feilmelding"></div>
+
+<ul id="liste">
+    <li class="listeItem">
+        <input type="checkbox" checked=""><label>Gjør ukesoppgaver i webprogrammering</label></li>
+</ul>
+
+
+
+
 
 
 
