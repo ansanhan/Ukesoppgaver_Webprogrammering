@@ -111,19 +111,20 @@ function dele() {
 }
 
 
+
 /* OPPGAVE 4 */
 const personRegister = [];
 
 function visPersonRegister() {
     const person1 = {
         navn: "Erik Sommer",
-        adresse: "Mølla 123",
+        adresse: "Darres gate 12",
         telefonnr: 43232323
     }
 
     const person2 = {
         navn: "Mats Sommervold",
-        adresse: "Mølla 123",
+        adresse: "Darres gate 12",
         telefonnr: 95732456
     }
 
@@ -144,6 +145,7 @@ function visPersonRegister() {
     }
 
     ut+= "</table>";
+
     document.getElementById("personRegister").innerHTML=ut;
 }
 
