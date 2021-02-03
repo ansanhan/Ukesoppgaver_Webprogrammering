@@ -16,7 +16,7 @@ function CtilF() {
     const celsius = Number(innC);
 
     if (isNaN(innC)) {
-        document.getElementById("utKonvertere").innerHTML = "<br/>Feil i input - det må skrives inn et nummer i feltet.";
+        document.getElementById("utKonvertere").innerHTML = "<br/>Feil i input - det må skrives inn et tall i feltet.";
     } else {
         const fraC = (9/5)*innC+32;
 
@@ -31,7 +31,7 @@ function FtilC() {
     const fahrenheit = Number(innF);
 
     if (isNaN(innF)) {
-        document.getElementById("utKonvertere").innerHTML = "<br/>Feil i input - det må skrives inn et nummer i feltet.";
+        document.getElementById("utKonvertere").innerHTML = "<br/>Feil i input - det må skrives inn et tall i feltet.";
     } else {
         const fraF = (5/9)*(innF-32);
 
@@ -39,4 +39,69 @@ function FtilC() {
             + fraF.toFixed(2) + " grader celsius.";
     }
 
+}
+
+/* OPPGAVE 2 */
+function pluss() {
+    const innTall1 = document.getElementById("tall1").value;
+    const innTall2 = document.getElementById("tall2").value;
+
+    const tall1 = Number(innTall1);
+    const tall2 = Number(innTall2);
+
+    if (isNaN(innTall1) || isNaN(innTall2)) {
+        document.getElementById("utregning").innerHTML = "<br/>Feil i input - det må skrives inn et tall i begge feltene.";
+    } else {
+        const pluss = tall1+tall2;
+
+        document.getElementById("utregning").innerHTML ="<br/>" + tall1 + " + " + tall2 + " = " + pluss;
+    }
+}
+
+function minus() {
+    const innTall1 = document.getElementById("tall1").value;
+    const innTall2 = document.getElementById("tall2").value;
+
+    const tall1 = Number(innTall1);
+    const tall2 = Number(innTall2);
+
+    if (isNaN(innTall1) || isNaN(innTall2)) {
+        document.getElementById("utregning").innerHTML = "<br/>Feil i input - det må skrives inn et tall i begge feltene.";
+    } else {
+        const minus = tall1-tall2;
+
+        document.getElementById("utregning").innerHTML ="<br/>" + tall1 + " - " + tall2 + " = " + minus;
+    }
+}
+
+function gange() {
+    const innTall1 = document.getElementById("tall1").value;
+    const innTall2 = document.getElementById("tall2").value;
+
+    const tall1 = Number(innTall1);
+    const tall2 = Number(innTall2);
+
+    if (isNaN(innTall1) || isNaN(innTall2)) {
+        document.getElementById("utregning").innerHTML = "<br/>Feil i input - det må skrives inn et tall i begge feltene.";
+    } else {
+        const gange = tall1*tall2;
+
+        document.getElementById("utregning").innerHTML ="<br/>" + tall1 + " * " + tall2 + " = " + gange;
+    }
+}
+
+function dele() {
+    const innTall1 = document.getElementById("tall1").value;
+    const innTall2 = document.getElementById("tall2").value;
+
+    const tall1 = Number(innTall1);
+    const tall2 = Number(innTall2);
+
+    if (isNaN(innTall1) || isNaN(innTall2)) {
+        document.getElementById("utregning").innerHTML = "<br/>Feil i input - det må skrives inn et tall i begge feltene.";
+    } else {
+        const dele = tall1/tall2;
+
+        document.getElementById("utregning").innerHTML ="<br/>" + tall1 + " / " + tall2 + " = " + dele;
+    }
 }
