@@ -118,22 +118,22 @@ const personRegister = [];
 function visPersonRegister() {
     const person1 = {
         navn: "Erik Sommer",
-        adresse: "Darres gate 12",
+        adresse: "Darres gate",
         telefonnr: 43232323
     }
 
     const person2 = {
         navn: "Mats Sommervold",
-        adresse: "Darres gate 12",
+        adresse: "Darres gate",
         telefonnr: 95732456
     }
 
     personRegister.push(person1, person2);
 
     let ut = "<table><tr>" +
-        "<th>Navn</th>" +
-        "<th>Adresse</th>" +
-        "<th>Telefonnr</th>" +
+        "<th><br/>Navn</th>" +
+        "<th><br/>Adresse</th>" +
+        "<th><br/>Telefonnr</th>" +
         "</tr>";
 
 
@@ -163,9 +163,9 @@ function registrerPerson() {
     personRegister.push(nyPerson);
 
     let ut = "<table><tr>" +
-        "<th>Navn</th>" +
-        "<th>Adresse</th>" +
-        "<th>Telefonnr</th>" +
+        "<th><br/>Navn</th>" +
+        "<th><br/>Adresse</th>" +
+        "<th><br/>Telefonnr</th>" +
         "</tr>";
 
     for (let person of personRegister) {
