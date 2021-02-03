@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript3</title>
+    <script src="javascript3.js"></script>
+</head>
+<body>
+<!-- Oppgave 1
+Lag en enkel HTML-side der du kan skrive inn navnet og alderen din i to forskjellige
+tekstbokser. Skriv så JavaScript-kode i samme fil for å vise navnet og alderen når en knapp
+trykkes. Lag så en sjekk på aldersfeltet om feltet inneholder et tall som er større enn null.
+Dersom det ikke er det skal det skrives ut en feilmelding enten via en «alert»-boks eller i et
+eget felt.-->
+
+<h3>Oppgave 1</h3>
+<h5>Vise navn og alder som skrives inn</h5>
+
+<table>
+    <tr>
+        <td>Navn:</td>
+        <td><input type="text" id="navn"/></td>
+    </tr>
+    <tr>
+        <td>Alder:</td>
+        <td><input type="text" id="alder"/></td>
+    </tr>
+</table>
+
+<button onclick="visInput();">Trykk her</button>
+
+<div id="utInput"></div>
+
+
+
+<!-- Oppgave 2
+Lag en HTML-side som konverterer fra farenheit til celsius.
+Formelen er:
+C = (5/9)*(F-32)
+Legg også til mulighet for å konvertere andre veien (fra celsius til farenheit) hvor formelen er:
+F = (9/5)*C+32
+Lag innputfelter for C og F.
+Dersom det skrives inn noe i inputfeltet for C så skal tilsvarende verdi i F legges ut i dette feltet.
+Dersom det skrives inn noe i inputfeltet for F så skal tilsvarende verdi i C legges ut i dette feltet.
+JavaScript skal brukes ved beregning og utlegging av resultater.-->
+
+<h3>Oppgave 2</h3>
+<h5>Konvertere fra celcius til fahrenheit og omvendt</h5>
+
+<table>
+    <tr>
+        <td>Skriv inn grader i celcius som skal konverteres til fahrenheit:</td>
+        <td><input type="text" id="celsius"/></td>
+    </tr>
+    <tr>
+        <td><button value="Fra celsius til fahrenheit" onclick="CtilF();">Konverter</button></td>
+    </tr>
+    <tr>
+        <td><br/>Skriv inn grader i fahrenheit som skal konverteres til celcius:</td>
+        <td><br/><input type="text" id="fahrenheit"/></td>
+    </tr>
+    <tr>
+        <td><button value="Fra fahrenheit til celsius" onclick="FtilC();">Konverter</button></td>
+    </tr>
+</table>
+
+<div id="utKonvertere"></div>
+
+
+
+</body>
+</html>
