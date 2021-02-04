@@ -188,30 +188,10 @@ function registrerPerson() {
 /* EKSTRAOPPGAVE 1 */
 
 function leggTil() {
-    let li = document.createElement("li");
-    let innVerdi = document.getElementById("nyToDo").value;
-    let t = document.createTextNode(innVerdi);
-    li.appendChild(t);
-    if (innVerdi === '') {
+    const nyttGjoremal = document.getElementById("nyToDo").value;
 
-    } else {
-        document.getElementById("liste").appendChild(li);
-    }
-    document.getElementById("nyToDo").value = "";
-
-    let span = document.createElement("SPAN");
-    let txt = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txt);
-    li.appendChild(span);
-
-    let i;
-    for (i = 0; i < close.length; i++) {
-        close[i].onclick = function() {
-            let div = this.parentElement;
-            div.style.display = "none";
-        }
-    }
+    document.getElementById("gjoremalListe").insertAdjacentHTML('beforeend', '<input type="checkbox">' + nyttGjoremal + '<br/>');
+    document.getElementById("nyToDo").value = '';
 }
 
-document.getElementById("feilmelding").innerHTML = "<br/>Husk at du må skrive noe i feltet :)";
+
