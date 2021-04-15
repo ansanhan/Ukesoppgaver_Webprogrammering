@@ -4,8 +4,19 @@
     <meta charset="UTF-8">
     <title>Klient-tjener (Spring)</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="klienttjener.js"></script>
 
+    <!--<script type="text/javascript">
+        function hentTemp(){
+            const mnd = $("#mnd").val();
+            const url = "/hentTemp?mnd=" + mnd;
+            $.get(url,function(temp){
+                    const ut = "Det var en gjennomsnittstemperatur på " + temp + " grader i "+ mnd;
+                    $("#vismnd").html(ut);
+                }
+            )
+        }
+    </script>-->
+    <script src="klienttjener.js"></script>
 </head>
 <body>
 <!-- Det skal lages et klient-tjener-program som svarer med  gjennomsnittstemperaturen for Oslo for en gitt måned.
@@ -22,8 +33,8 @@ Bruk videre en switch for å "oversette" månedsnavn til array-indeks. -->
 <h3>Oppgave 1</h3>
 <h5>Gjennomsnittstemperatur for Oslo</h5>
 
-Skriv inn måned med stor forbokstav: <input type="text" id="mnd">
-<input type="button" id="velgmnd" value="Velg">
-<p id="vismnd"></p>
+Skriv inn måned med stor forbokstav: <input type="text" id="mnd"/>
+<button onclick="hentTemp()">Velg</button>
+<div id="vismnd"></div>
 </body>
 </html>

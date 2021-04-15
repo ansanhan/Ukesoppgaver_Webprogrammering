@@ -6,7 +6,7 @@ import org.springframework.stereotype.Service;
 public class Temperatur {
     private final Integer[] tempArray = new Integer[]{-3,-2,2,7,12,16,18,17,12,7,3,-2};
 
-    public int getTemp(String mnd) {
+    public int hentTemp(String mnd) {
         switch (mnd) {
             case "Januar":
                 return tempArray[0];
